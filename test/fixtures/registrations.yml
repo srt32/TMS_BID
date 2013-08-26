@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  semester_season: MyString
+  semester_year: 1
+  address: MyString
+  phone: MyString
+  email: MyString
+  attendees: 1
+
+two:
+  name: MyString
+  semester_season: MyString
+  semester_year: 1
+  address: MyString
+  phone: MyString
+  email: MyString
+  attendees: 1
