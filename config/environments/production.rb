@@ -32,6 +32,22 @@ BID::Application.configure do
   # Generate digests for assets URLs.
   config.assets.digest = true
 
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.default_url_options = { 
+      :host => 'http://sheltered-refuge-2845.herokuapp.com/'
+   }
+
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "gmail.com",
+    authentication: "plain",
+    enablestarttls_auto: true,
+    user_name: ENV["GMAIL_USERNAME"],
+    password: ENV["GMAIL_PASSWORD"]
+  }
+
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
 
