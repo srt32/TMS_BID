@@ -65,7 +65,7 @@ class AttendeesController < ApplicationController
   private
     def authorize
       redirect_to root_path unless current_user
-      flash[:notice] = "You need to be logged in to see these pages."
+      flash[:notice] = "You need to be logged in to see these pages." unless current_user
     end
 
     # Use callbacks to share common setup or constraints between actions.
