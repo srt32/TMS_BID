@@ -6,10 +6,13 @@ class UserMailer < ActionMailer::Base
   #
   #   en.user_mailer.attendee_confirmation.subject
   #
-  def attendee_confirmation
-    @greeting = "Hi"
+  def attendee_confirmation(attendee)
+    @attendee = attendee
+    @url = "http://sheltered-refuge-2845.herokuapp.com/"
+    subject = "Thanks for signing up for The Mountain School's Big Idea Day"
 
-    mail to: "simon.taranto@gmail.com"
+    mail to: @attendee.email,
+      subject: subject.to_s
   end
 
   def admin_notification

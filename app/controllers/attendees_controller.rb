@@ -29,6 +29,7 @@ class AttendeesController < ApplicationController
 
     respond_to do |format|
       if @attendee.save
+        UserMailer.attendee_confirmation(@attendee).deliver
         format.html { redirect_to root_path, notice: 'Great, we have your info.  Expect an email from us shortly.' }
         format.json { render action: 'show', status: :created, location: @attendee }
       else
