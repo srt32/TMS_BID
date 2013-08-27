@@ -1,7 +1,19 @@
-<% if current_user %>
-  <%= link_to "Home", root_path %> | 
-  <%= link_to "Attendees", attendees_path %> | 
-  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-<% else %>
-  <%= link_to "Sign in", new_user_session_path %>
-<% end %>
+<div class="navbar navbar-fixed-bottom footer">
+		<div class="navbar-inner">
+		<div class="container">
+		  <ul class="nav pull-left">
+		  	<% if current_user %>
+			  <li><%= link_to "Attendees", attendees_path %></li>
+			  <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+			<% else %>
+			  <li><%= link_to "Sign in", new_user_session_path %></li>
+			<% end %>
+		  </ul> 
+		  <ul class="nav pull-right">
+		  	<li><a href="http://gardenhillfund.org" target="_blank">Garden Hill Fund</a></li>
+		  	<li><a href="https://www.mountainschool.org/podium/default.aspx?t=1300" target="_blank">Alumni Directory</a></li>
+		    <li><a href="https://www.facebook.com/pages/The-Mountain-School-of-Milton-Academy/252084468164123" target="_blank">Facebook</a></li>
+		    <li><a href="http://www.linkedin.com/groups?gid=150431&trk=group-name" target="_blank">LinkedIn</a></li>
+		    <li><a href="https://twitter.com/MountainSchool" target="_blank">Twitter</a></li>
+		  </ul>
+</div>
