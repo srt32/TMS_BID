@@ -1,0 +1,39 @@
+<h1>Listing attendees</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Semester season</th>
+      <th>Semester year</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Attendees</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attendees.each do |attendee| %>
+      <tr>
+        <td><%= attendee.name %></td>
+        <td><%= attendee.semester_season %></td>
+        <td><%= attendee.semester_year %></td>
+        <td><%= attendee.address %></td>
+        <td><%= attendee.phone %></td>
+        <td><%= attendee.email %></td>
+        <td><%= attendee.attendees %></td>
+        <td><%= link_to 'Show', attendee %></td>
+        <td><%= link_to 'Edit', edit_attendee_path(attendee) %></td>
+        <td><%= link_to 'Destroy', attendee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New attendee', new_attendee_path %>

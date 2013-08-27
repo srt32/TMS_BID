@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def home
-  	@registration = Registration.new
+  	@attendee = Attendee.new
   end
 end

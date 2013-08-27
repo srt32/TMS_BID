@@ -1,6 +1,6 @@
 BID::Application.routes.draw do
 
-  resources :registrations
+  resources :attendees
 
   devise_for :users
   root 'pages#home'
