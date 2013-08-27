@@ -1,19 +1,28 @@
-<div class="navbar navbar-fixed-bottom footer">
-		<div class="navbar-inner">
-		<div class="container">
-		  <ul class="nav pull-left">
-		  	<% if current_user %>
-			  <li><%= link_to "Attendees", attendees_path %></li>
-			  <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
-			<% else %>
-			  <li><%= link_to "Sign in", new_user_session_path %></li>
-			<% end %>
-		  </ul> 
-		  <ul class="nav pull-right">
-		  	<li><a href="http://gardenhillfund.org" target="_blank">Garden Hill Fund</a></li>
-		  	<li><a href="https://www.mountainschool.org/podium/default.aspx?t=1300" target="_blank">Alumni Directory</a></li>
-		    <li><a href="https://www.facebook.com/pages/The-Mountain-School-of-Milton-Academy/252084468164123" target="_blank">Facebook</a></li>
-		    <li><a href="http://www.linkedin.com/groups?gid=150431&trk=group-name" target="_blank">LinkedIn</a></li>
-		    <li><a href="https://twitter.com/MountainSchool" target="_blank">Twitter</a></li>
-		  </ul>
+<div class="container">
+  <div class="row">
+    <div class="span4">
+      <h3>The Garden Hill Fund</h3>
+      <p>
+        This new program of the Mountain School Alumni Initiative will support the good work of Mountain School graduates of all ages as they bring to life the mission of the school -- to reach beyond the self and focus on the common good -- in their own communities and the larger world. <br>
+      <a href="http://gardenhillfund.org">Learn more...</a>
+      </p>
+    </div>
+    <div class="span4">
+      <h3>Alumni Directory</h3>
+      <p>
+        Connect with classmates and fellow alums. Find new opportunities, learn about interesting projects or just look for a couch to crash on for a night. <br>
+        <a href="https://www.mountainschool.org/podium/default.aspx?t=136798">Connect now...</a>
+      </p>
+    </div>
+    <div class="span4 social-buttons">
+      <h3>Get Social!</h3>
+        <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FThe-Mountain-School-of-Milton-Academy%2F252084468164123&amp;width=300&amp;height=80&amp;colorscheme=light&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;send=true&amp;appId=393264994062050" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:80px;" allowTransparency="true"></iframe><br>
+
+        <a href="https://twitter.com/MountainSchool" class="twitter-follow-button" data-show-count="false">Follow @MountainSchool</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+        </script>
+
+        <a href="http://www.linkedin.com/groups?gid=150431&trk=group-name" target="_blank"><%= image_tag("/images/linkedin.png", :height => '75', :width => '160', :alt => "TMS Alumni Site") %></a><br>
+    </div>
+  </div>
 </div>
