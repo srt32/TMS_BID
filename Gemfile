@@ -16,6 +16,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'rack-google_analytics', :require => "rack/google_analytics"
 end
 
 # Use SCSS for stylesheets
