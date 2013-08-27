@@ -1,3 +1,10 @@
-UserMailer#admin_notification
+There is a new sign up for Big Idea Day.  Here's the info:
 
-WIP
+Name: <%= @attendee.try(:name) %>
+Semester <%= @attendee.try(:semester_season) %><%= @attendee.try(:semester_year) %>
+Address: <%= @attendee.try(:address) %>
+Phone: <%= @attendee.try(:phone) %>
+Email: <%= @attendee.try(:email) %>
+Attendees: <%= @attendee.try(:attendees) %>
+
+Check out more info here, <%= @url %>
