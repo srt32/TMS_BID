@@ -1,5 +1,6 @@
 class AttendeesController < ApplicationController
   before_action :set_attendee, only: [:show, :edit, :update, :destroy]
+  before_action :authorize, :except => [:new, :create]
 
   # GET /attendees
   # GET /attendees.json
@@ -62,6 +63,11 @@ class AttendeesController < ApplicationController
   end
 
   private
+    def authorize
+      redirect_to root_path unless current_user
+      flash[:notice] = "You need to be logged in to see these pages."
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_attendee
       @attendee = Attendee.find(params[:id])
