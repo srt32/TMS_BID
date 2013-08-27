@@ -1,3 +1,23 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#buckets-container {
+  position:relative;
+}
+
+#buckets-image {
+  left:0;
+  top:0;
+}
+
+#buckets-text {
+  z-index:100;
+  position:absolute;
+  color:white;
+  font-size:48px;
+  font-wieght:bold;
+  top:25px;
+  line-height:150%;
+}
