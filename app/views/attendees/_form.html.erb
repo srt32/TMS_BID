@@ -8,13 +8,13 @@
   <div class="control-group">
     <%= f.label :semester_season, :class => 'control-label' %>
     <div class="controls">
-      <%= f.select :semester_season, [['Fall','Fall'],['Spring','Spring']] %>
+      <%= f.select :semester_season, [['Fall','Fall'],['Spring','Spring']], :prompt => "Season..." %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :semester_year, :class => 'control-label' %>
     <div class="controls">
-      <%= f.select :semester_year, (1984..2013) %>
+      <%= f.select :semester_year, (1984..2013), :prompt => "Year..." %>
     </div>
   </div>
   <div class="control-group">
