@@ -1,45 +1,50 @@
-<%= form_for(@attendee) do |f| %>
-  <% if @attendee.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@attendee.errors.count, "error") %> prohibited this attendee from being saved:</h2>
-
-      <ul>
-      <% @attendee.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= form_for @attendee, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
     </div>
-  <% end %>
+  </div>
+  <div class="control-group">
+    <%= f.label :semester_season, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :semester_season, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :semester_year, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :semester_year, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :address, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :address, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :phone, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :phone, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :email, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :email, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :attendees, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :attendees, :class => 'text_field' %>
+    </div>
+  </div>
 
-  <div class="field">
-    *Name:
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    Semester Season:
-    <%= f.select :semester_season, [['Fall','Fall'],['Spring','Spring']] %>
-  </div>
-  <div class="field">
-    Semester Year:
-    <%= f.select :semester_year, (1984..2013) %>
-  </div>
-  <div class="field">
-    Address:
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    Phone:
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    *Email:
-    <%= f.email_field :email %>
-  </div>
-  <div class="field">
-    *Number attending:
-    <%= f.select :attendees, (1..10) %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.submit :Submit, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                attendees_path, :class => 'btn' %>
   </div>
 <% end %>
