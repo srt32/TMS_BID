@@ -20,7 +20,7 @@
   <div class="control-group">
     <%= f.label :Nearest_City, :class => 'control-label' %>
     <div class="controls">
-      <%= f.collection_select(:address, Location.order("city_name").all, :city_name, :city_name) %>
+      <%= f.collection_select(:address, Location.order("city_name").all, :city_name, :city_name, :include_blank => true) %>
     </div>
   </div>
   <div class="control-group">
@@ -39,6 +39,12 @@
     <%= f.label :attendees, "Attendees*", :class => 'control-label' %>
     <div class="controls">
       <%= f.select :attendees, (1..10) %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :Want_to_host?, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :host, :checked_value => "true", :unchecked_value => "false", :class => 'text_field' %> <br> Don't see a nearby city?  Want to host an event yourself? Let us know, we'll be in touch.
     </div>
   </div>
 
