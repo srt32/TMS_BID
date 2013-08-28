@@ -1,5 +1,7 @@
 BID::Application.routes.draw do
 
+  resources :locations
+
   resources :attendees
 
   devise_for :users
