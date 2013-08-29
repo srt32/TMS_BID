@@ -6,5 +6,6 @@ Address: <%= @attendee.try(:address) %>
 Phone: <%= @attendee.try(:phone) %>
 Email: <%= @attendee.try(:email) %>
 Attendees: <%= @attendee.try(:attendees) %>
+Interested in hosting? <%= @attendee.try(:host) %>
 
 Check out more info here, <%= @url %>
