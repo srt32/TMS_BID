@@ -3,8 +3,8 @@ There is a new sign up for Big Idea Day.  Here's the info:
 Name: <%= @attendee.try(:name) %>
 Semester <%= @attendee.try(:semester_season) %><%= @attendee.try(:semester_year) %>
 Address: <%= @attendee.try(:address) %>
-Phone: <%= @attendee.try(:phone) %>
 Email: <%= @attendee.try(:email) %>
+Zip: <%= @attendee.try(:zip) %>
 Attendees: <%= @attendee.try(:attendees) %>
 Interested in hosting? <%= @attendee.try(:host) %>
 
