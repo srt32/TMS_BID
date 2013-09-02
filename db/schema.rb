@@ -11,19 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130902202033) do
+ActiveRecord::Schema.define(version: 20130902234943) do
 
   create_table "attendees", force: true do |t|
     t.string   "name"
     t.string   "semester_season"
     t.integer  "semester_year"
-    t.string   "address"
+    t.integer  "location_id",     limit: 255
     t.string   "phone"
     t.string   "email"
     t.integer  "attendees"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "host",            default: false
+    t.boolean  "host",                        default: false
     t.integer  "zip"
   end
 
