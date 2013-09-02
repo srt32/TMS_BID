@@ -6,6 +6,24 @@
     </div>
   </div>
   <div class="control-group">
+    <%= f.label :email, "Email*", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.email_field :email, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :Nearest_City, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.collection_select(:address, Location.order("city_name").all, :city_name, :city_name, :include_blank => true, :prompt => "Choose one...") %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :zip, "Zip Code*", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.phone_field :zip, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
     <%= f.label :semester_season, :class => 'control-label' %>
     <div class="controls">
       <%= f.select :semester_season, [['Fall','Fall'],['Spring','Spring']], :prompt => "Season..." %>
@@ -15,24 +33,6 @@
     <%= f.label :semester_year, :class => 'control-label' %>
     <div class="controls">
       <%= f.select :semester_year, (1984..2013), :prompt => "Year..." %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :Nearest_City, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.collection_select(:address, Location.order("city_name").all, :city_name, :city_name, :include_blank => true) %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :phone, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.phone_field :phone, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :email, "Email*", :class => 'control-label' %>
-    <div class="controls">
-      <%= f.email_field :email, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">

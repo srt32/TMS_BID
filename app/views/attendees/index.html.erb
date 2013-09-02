@@ -5,13 +5,13 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:semester_season) %></th>
       <th><%= model_class.human_attribute_name(:semester_year) %></th>
       <th><%= model_class.human_attribute_name(:address) %></th>
       <th><%= model_class.human_attribute_name(:phone) %></th>
       <th><%= model_class.human_attribute_name(:email) %></th>
+      <th><%= model_class.human_attribute_name(:zip) %></th>
       <th><%= model_class.human_attribute_name(:attendees) %></th>
       <th><%= model_class.human_attribute_name(:host) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
@@ -21,13 +21,13 @@
   <tbody>
     <% @attendees.each do |attendee| %>
       <tr>
-        <td><%= link_to attendee.id, attendee_path(attendee) %></td>
-        <td><%= attendee.name %></td>
+        <td><%= link_to attendee.name, attendee_path(attendee) %></td>
         <td><%= attendee.semester_season %></td>
         <td><%= attendee.semester_year %></td>
         <td><%= attendee.address %></td>
         <td><%= attendee.phone %></td>
         <td><%= attendee.email %></td>
+        <td><%= attendee.zip %></td>
         <td><%= attendee.attendees %></td>
         <td><%= attendee.host %></td>
         <td><%=l attendee.created_at %></td>
