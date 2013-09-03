@@ -20,17 +20,26 @@
 
 <div class="hr"><hr /></div>
 
-<div id="sign-up-form">
-  <h2>Sign Up</h2>
-  <h6>Fields with an * are required</h6>
+<div class="container" id="sign-up-section">
+  <div class="row">
+    <div class="span5">
+      <div id="sign-up-form">
+        <h2>Sign Up</h2>
+        <h6>Fields with an * are required</h6>
 
-  <%= render 'attendees/form' %>
+        <%= render 'attendees/form' %>
+      </div>
+    </div>
+    <div class="span7">
+      <img src="http://maps.googleapis.com/maps/api/staticmap?center=Vershire,Vermont&zoom=13&size=400x300&maptype=terrain&sensor=false">
+    </div>
+  </div>
 
-<div class="hr"><hr /></div>
-
-</div><br>
+  <div class="hr"><hr /></div>
+</div>
 
 <div id="about-details">
+  <h2>Some Questions to Consider</h2>
   Last year’s inaugural Big Idea Day discussion, Technology: Who’s the Boss? was a huge success (and led to coverage in The New York Times and on the BBC, as well as influenced the new cell phone policy at The Mountain School).
   <br>
 
