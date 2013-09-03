@@ -6,11 +6,7 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:city_name) %></th>
-      <th><%= model_class.human_attribute_name(:host_name) %></th>
-      <th><%= model_class.human_attribute_name(:address) %></th>
-      <th><%= model_class.human_attribute_name(:description) %></th>
-      <th><%= model_class.human_attribute_name(:gmaps) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th>Sign Ups</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -18,11 +14,13 @@
     <% @locations.each do |location| %>
       <tr>
         <td><%= link_to location.city_name, location_path(location) %></td>
-        <td><%= location.host_name %></td>
-        <td><%= location.address %></td>
-        <td><%= location.description %></td>
-        <td><%= location.gmaps %></td>
-        <td><%=l location.created_at %></td>
+        <td>
+          <% @headcount.each do |headcount| %>
+            <% if headcount.location_id == location.id %>
+              <%= headcount.count %>
+            <% end %>
+          <% end %>
+        </td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_location_path(location), :class => 'btn btn-mini' %>

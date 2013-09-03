@@ -1,6 +1,7 @@
 class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :headcount, only: [:index]
 
   # GET /locations
   # GET /locations.json
@@ -71,5 +72,12 @@ class LocationsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def location_params
       params.require(:location).permit(:city_name, :host_name, :address, :description, :latitude, :longitude, :gmaps)
+    end
+
+    def headcount
+      @headcount = Attendee.find(:all,
+        :select => "location_id, count(attendees) as count",
+        :group => "location_id",
+        )
     end
 end
