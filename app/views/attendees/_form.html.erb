@@ -14,7 +14,7 @@
   <div class="control-group">
     <%= f.label :Nearest_City, :class => 'control-label' %>
     <div class="controls">
-      <%= f.collection_select(:address, Location.order("city_name").all, :city_name, :city_name, :include_blank => true, :prompt => "Choose one...") %>
+      <%= f.collection_select(:location_id, Location.order("city_name").all, :id, :city_name, :include_blank => true, :prompt => "Choose one...") %>
     </div>
   </div>
   <div class="control-group">

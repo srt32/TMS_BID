@@ -8,7 +8,7 @@
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:semester_season) %></th>
       <th><%= model_class.human_attribute_name(:semester_year) %></th>
-      <th><%= model_class.human_attribute_name(:address) %></th>
+      <th><%= model_class.human_attribute_name(:location_id) %></th>
       <th><%= model_class.human_attribute_name(:phone) %></th>
       <th><%= model_class.human_attribute_name(:email) %></th>
       <th><%= model_class.human_attribute_name(:zip) %></th>
@@ -24,7 +24,7 @@
         <td><%= link_to attendee.name, attendee_path(attendee) %></td>
         <td><%= attendee.semester_season %></td>
         <td><%= attendee.semester_year %></td>
-        <td><%= attendee.address %></td>
+        <td><%= attendee.location.try(:city_name) %></td>
         <td><%= attendee.phone %></td>
         <td><%= attendee.email %></td>
         <td><%= attendee.zip %></td>
