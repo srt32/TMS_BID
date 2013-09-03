@@ -8,7 +8,14 @@
 
   body {
 	padding-top:70px;
-	padding-left: 100px;
-	padding-right: 100px;
+	padding-left: 150px;
+	padding-right: 150px;
 	padding-bottom: 50px;
-}
+  }
+
+  div.hr {
+    background: #fff  no-repeat scroll center;
+    margin-left: 5em;
+    margin-right: 5em;
+    height:1em;
+  }
