@@ -31,7 +31,12 @@
       </div>
     </div>
     <div class="span7">
-      <img src="http://maps.googleapis.com/maps/api/staticmap?center=Vershire,Vermont&zoom=13&size=400x300&maptype=terrain&sensor=false">
+      <% if false %>
+        <img src="http://maps.googleapis.com/maps/api/staticmap?center=Vershire,Vermont&zoom=13&size=400x300&maptype=terrain&sensor=false">
+      <% end %>
+
+      <%= gmaps4rails(@locations_json) %>
+
     </div>
   </div>
 

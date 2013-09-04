@@ -46,6 +46,8 @@ GEM
     figaro (0.6.4)
       bundler (~> 1.0)
       rails (>= 3, < 5)
+    geocoder (1.1.8)
+    gmaps4rails (1.5.6)
     hike (1.2.3)
     i18n (0.6.5)
     jbuilder (1.5.1)
@@ -136,6 +138,8 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   figaro
+  geocoder
+  gmaps4rails
   jbuilder (~> 1.2)
   jquery-rails
   pg
