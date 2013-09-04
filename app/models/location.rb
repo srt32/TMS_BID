@@ -11,4 +11,8 @@ class Location < ActiveRecord::Base
   def gmaps4rails_address
     "#{self.city_name}"
   end
+
+  def gmaps4rails_infowindow
+    "#{self.city_name}"
+  end
 end
