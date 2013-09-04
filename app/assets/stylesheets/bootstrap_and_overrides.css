@@ -19,3 +19,11 @@
     margin-right: 5em;
     height:1em;
   }
+
+  #map img { 
+  max-width: none;
+  }
+  
+  #map label { 
+    width: auto; display:inline; 
+  } 
