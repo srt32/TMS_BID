@@ -14,6 +14,7 @@ gem 'twitter-bootstrap-rails'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 2.0'
+  gem 'capybara'
 end
 
 group :production do

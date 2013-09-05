@@ -1,10 +1,12 @@
+require 'spec_helper'
+
 describe "the attendee signup process", :type => :feature do
   # before :each do
   #   User.make(:email => 'user@example.com', :password => 'caplin')
   # end
 
   it "signs me up" do
-    visit '/'
+    visit root_path
     within("#sign-up-form") do
       fill_in 'Name', :with => ''
       fill_in 'Email', :with => ''
