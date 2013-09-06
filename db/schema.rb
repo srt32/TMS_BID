@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130905235757) do
+ActiveRecord::Schema.define(version: 20130906040628) do
 
   create_table "attendees", force: true do |t|
     t.string   "name"
@@ -23,10 +23,10 @@ ActiveRecord::Schema.define(version: 20130905235757) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "host",            default: false
-    t.integer  "zip"
     t.integer  "location_id"
     t.boolean  "follow_up",       default: false
     t.boolean  "virtual",         default: false
+    t.string   "zip"
   end
 
   create_table "locations", force: true do |t|
