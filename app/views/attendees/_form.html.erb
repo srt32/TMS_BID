@@ -44,7 +44,16 @@
   <div class="control-group">
     <%= f.label :Want_to_host?, :class => 'control-label' %>
     <div class="controls">
-      <%= f.check_box :host %> <br> Don't see a nearby city?  Want to host an event yourself? Let us know, we'll be in touch.
+      <%= f.check_box :host %>  YES!
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label "Don't see a location near you?", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :follow_up %>  I would like to know if there are enough alums in my area to form a group; please get in touch with me.
+    </div>
+    <div class="controls">
+      <%= f.check_box :virtual %>  I would like to join a virtual, web-based video meeting on Big Idea Day. (details to follow)
     </div>
   </div>
 

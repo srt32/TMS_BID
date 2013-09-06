@@ -6,6 +6,8 @@ Address: <%= @attendee.try(:address) %>
 Email: <%= @attendee.try(:email) %>
 Zip: <%= @attendee.try(:zip) %>
 Attendees: <%= @attendee.try(:attendees) %>
-Interested in hosting? <%= @attendee.try(:host) %>
+Interested in hosting: <%= @attendee.try(:host) %>
+Follow Up: <%= @attendee.try(:follow_up) %>
+Interested in virtual group: <%= @attendee.try(:virtual) %>
 
 Check out more info here, <%= @url %>
