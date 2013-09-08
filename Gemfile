@@ -11,12 +11,13 @@ gem 'gmaps4rails'
 gem 'twitter-bootstrap-rails'
 
 # Use sqlite3 as the database for Active Record
-group :development, :test do
-  gem 'sqlite3'
-end
+# group :development, :test do
+#   gem 'sqlite3'
+# end
+
+gem 'pg'
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
   gem 'rack-google_analytics', :require => "rack/google_analytics"
 end
