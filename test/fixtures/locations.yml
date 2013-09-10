@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  city_name: MyString
-  host_name: MyString
-  address: MyString
-  description: MyString
+  city_name: "New York City, NY"
+  host_name: ""
+  address: ""
+  description: ""
   latitude: 1.5
   longitude: 1.5
-  gmaps: false
+  gmaps: true
 
 two:
   city_name: MyString
