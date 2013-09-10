@@ -1,4 +1,17 @@
 <%= form_for @attendee, :html => { :class => 'form-horizontal' } do |f| %>
+
+  <% if @attendee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@attendee.errors.count, "error") %> caused some issues:</h2>
+
+      <ul>
+      <% @attendee.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="control-group">
     <%= f.label :name, "Name*", :class => 'control-label' %>
     <div class="controls">
@@ -12,7 +25,7 @@
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :Nearest_City, :class => 'control-label' %>
+    <%= f.label :Nearest_Location, :class => 'control-label' %>
     <div class="controls">
       <%= f.collection_select(:location_id, Location.order("city_name").all, :id, :city_name, :include_blank => true, :prompt => "Choose one...") %>
     </div>
@@ -44,7 +57,16 @@
   <div class="control-group">
     <%= f.label :Want_to_host?, :class => 'control-label' %>
     <div class="controls">
-      <%= f.check_box :host %> <br> Don't see a nearby city?  Want to host an event yourself? Let us know, we'll be in touch.
+      <%= f.check_box :host %>  YES!
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label "Don't see a location near you?", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :follow_up %>  I would like to know if there are enough alums in my area to form a group; please get in touch with me.
+    </div>
+    <div class="controls">
+      <%= f.check_box :virtual %>  I would like to join a virtual, web-based video meeting on Big Idea Day. (details to follow)
     </div>
   </div>
 

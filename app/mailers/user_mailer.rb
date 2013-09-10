@@ -8,7 +8,7 @@ class UserMailer < ActionMailer::Base
   #
   def attendee_confirmation(attendee)
     @attendee = attendee
-    @url = "http://sheltered-refuge-2845.herokuapp.com/"
+    @url = "http://www.TMSbigideaday.org"
     subject = "Thanks for signing up for The Mountain School's Big Idea Day"
 
     mail to: @attendee.email,
@@ -17,7 +17,7 @@ class UserMailer < ActionMailer::Base
 
   def admin_notification(attendee)
     @attendee = attendee
-    @url = "http://sheltered-refuge-2845.herokuapp.com/"
+    @url = "http://www.TMSbigideaday.org"
     subject = "There is a new Big Idea Day sign up"
 
     mail to: "tmsbid@gmail.com",
